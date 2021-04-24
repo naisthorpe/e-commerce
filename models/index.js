@@ -20,7 +20,8 @@ Product.belongsToMany(Tag, {
   through: {
     model: ProductTag
   },
-  as: "tags"
+  as: "tags",
+  onDelete: "CASCADE"
 });
 
 // Tags belongToMany Products (through ProductTag)
